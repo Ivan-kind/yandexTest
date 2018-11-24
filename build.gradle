@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'yandexTest'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile(
+            'org.slf4j:slf4j-jdk14:1.7.25',
+            'com.h2database:h2:1.4.190',
+            'org.hibernate:hibernate-core:4.1.9.Final',
+            'org.hibernate.common:hibernate-commons-annotations:4.0.1.Final',
+            'org.hibernate:hibernate-ehcache:4.1.9.Final',
+            'org.hibernate:hibernate-entitymanager:4.1.9.Final'
+    )
+
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
